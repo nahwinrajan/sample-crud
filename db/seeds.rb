@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'faker'
+
+Post.destroy_all
+
+5.times do
+  post = Post.create(
+    :title => Faker::Lorem.sentence(rand(3..10)).chomp('.'),
+    :title => Faker::Lorem.sentence(rand(5..10)).chomp('.'),
+    :content => Faker::Lorem.paragraphs(rand(5..15)).join('\n')
+    )
+end

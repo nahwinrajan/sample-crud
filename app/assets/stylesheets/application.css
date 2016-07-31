@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+ @import url(https://fonts.googleapis.com/css?family=Raleway:400,600|Sacramento|Comfortaa);
+
+* {
+  font-family: "Comfortaa", "Open Sans", "Helvetica Neu", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #555;
+}
+
+body {
+  /*background-color: #ec5f67;*/
+  /*color: #fff !important;*/
+}
+
+/* miscellaneous */
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+
+  color: #f99157;
+  font-family: "Anonymous Pro";
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #5fb3b3;
+  padding: 10px;
+}
