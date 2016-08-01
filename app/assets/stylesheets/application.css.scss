@@ -13,7 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
  @import url(https://fonts.googleapis.com/css?family=Raleway:400,600|Sacramento|Comfortaa);
+
+// variables
+  $col-max-width: 100px;
+// mixins
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 * {
   font-family: "Comfortaa", "Open Sans", "Helvetica Neu", Arial, sans-serif;
@@ -23,8 +35,7 @@
 }
 
 body {
-  /*background-color: #ec5f67;*/
-  /*color: #fff !important;*/
+  margin-top: 45px;
 }
 
 /* miscellaneous */
@@ -34,11 +45,19 @@ body {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
-
-  color: #f99157;
-  font-family: "Anonymous Pro";
-  background-color: white;
+  padding: 10px;
   border-radius: 5px;
   border: 2px solid #5fb3b3;
-  padding: 10px;
+
+  color: #f99157;
+  background-color: #333;
+
+  font-family: "Anonymous Pro";
+}
+
+.col-truncate {
+  width: $col-max-width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
